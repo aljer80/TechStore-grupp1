@@ -14,6 +14,7 @@
 header h1 {
     font-family: 'Secular One', sans-serif;
     font-weight: 200;
+    font-size: 2.5rem;
 }
 
 .phone-div h2 {
@@ -25,10 +26,32 @@ header {
     height: 70px;
     background-color: #202020;
     display: flex;
+    width: 100%;
     justify-content: space-between;
+    align-items:center; 
+    position: fixed;
+    margin-top: 0;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.hdiv-right {
+    display: flex;
+    justify-content: flex-end; 
     align-items: center;
 }
 
+.hdiv-right p {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-family: 'Secular One', sans-serif;
+    font-weight:lighter;
+    font-size: 2.5rem;
+}
+
+#shoppingcart {
+font-size: 2rem;
+}
 
 
 .phone-div {
