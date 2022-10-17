@@ -19,6 +19,7 @@ header h1 {
 .phone-div h2 {
     font-family: 'Secular One', sans-serif;
 /*Find a better font*/
+
 }
 
 header {
@@ -30,6 +31,7 @@ header {
 }
 
 
+/* mobile modells area */
 
 .phone-div {
     display: flex;
@@ -39,9 +41,42 @@ header {
     height: 100vh;
 }
 
-p {
-    font-family: 'Secular One', sans-serif;  
+.phone-div h2 {
+    font-size: 2.5rem;
 }
+
+p {
+    font-family: 'Secular One', sans-serif; 
+    margin: 10px; 
+}
+
+.addToCartBtn {
+    background-color: #66B2FF;
+    color: #ffffff;
+    height: 2.5rem;
+    width: 18rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+.fa {
+    -webkit-filter: invert(100%);
+}
+
+fa::after {
+    -webkit-filter: invert(0%);
+}
+
+/* leta efter en lösning för att ändra ikonens färg */
+.fa-cart-arrow-down {
+    color: #ffffff;
+    margin: 10px;
+}
+
+
+
+
 
 /* Styling för enheter med bredd på minst 768px här - padda*/
 
