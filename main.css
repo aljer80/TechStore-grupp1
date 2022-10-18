@@ -42,6 +42,17 @@ header {
     align-items: center;
 }
 
+.hdiv-right p {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-family: 'Secular One', sans-serif;
+    font-weight:lighter;
+    font-size: 2.5rem;
+}
+
+#shoppingcart {
+font-size: 2rem;
+}
 
 
 .hdiv-right p {
