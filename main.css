@@ -5,8 +5,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color: #FFFFFF;
-    color: #202020;
 }
 
 /* header area */
@@ -15,6 +13,11 @@ header h1 {
     font-family: 'Secular One', sans-serif;
     font-weight: 200;
     font-size: 2.5rem;
+    color: #FFFFFF; 
+}
+
+header a { 
+    text-decoration: none;
 }
 
 .phone-div h2 {
@@ -43,28 +46,17 @@ header {
 }
 
 .hdiv-right p {
+    color: #FFFFFF;
     padding-left: 5px;
     padding-right: 5px;
     font-family: 'Secular One', sans-serif;
     font-weight:lighter;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 #shoppingcart {
 font-size: 2rem;
-}
-
-
-.hdiv-right p {
-    padding-left: 5px;
-    padding-right: 5px;
-    font-family: 'Secular One', sans-serif;
-    font-weight:lighter;
-    font-size: 2.5rem;
-}
-
-#shoppingcart {
-    font-size: 2rem;
+color: #FFFFFF;
 }
 
 .fa-solid {
