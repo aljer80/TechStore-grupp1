@@ -30,11 +30,12 @@ function addProductsToWebpage() {
     for (const product of listOfProducts) {
         //funktion för att skapa div-element i main
         const phoneDiv = document.createElement("div");
-        phoneDiv.classList.add("phone-div", "test");
+        phoneDiv.classList.add("phone-div");
         phoneDivHeading(product.title, phoneDiv);
         phoneDivTextP(product.description, phoneDiv);
         phoneDivImage(product.image, phoneDiv);
         phoneDivPriceP(product.price, phoneDiv);
+        phoneDivBtn(phoneDiv);
         main.appendChild(phoneDiv);
     }
     
@@ -58,6 +59,16 @@ function phoneDivHeading (title, phoneDiv) {
     phoneDiv.appendChild(heading);
 
     return phoneDivHeading;
+}
+
+function phoneDivBtn (phoneDiv) {
+    const addToCartBtn =document.createElement("button");
+    addToCartBtn.innerHTML = '<i class="fa-solid fa-cart-arrow-down"></i>' + "Lägg till i kundvagnen";
+    addToCartBtn.classList.add("addToCartBtn");
+    phoneDiv.appendChild(addToCartBtn);
+    
+    return phoneDivBtn;
+
 }
 
 function phoneDivTextP (description, phoneDiv) {

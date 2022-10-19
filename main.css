@@ -107,7 +107,7 @@ p {
 
 
 /* leta efter en lösning för att ändra ikonens färg */
-i {
+.fa-solid {
     color: #fff;
     background-color: transparent;
 }
