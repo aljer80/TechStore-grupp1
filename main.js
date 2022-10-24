@@ -113,6 +113,13 @@ function phoneDivPriceP (price, phoneDiv) {
 
 
 function addToCart(product) {
+    if (!localStorage.getItem("phonesInCart")) { //eventuellt plural? products
+        localStorage.setItem("phonesInCart", JSON.stringify([product]));
+    } else {
+        const phonesInCart = JSON.parse(localStorage.getItem("phonesInCart")); 
+        phonesInCart.push(product);
+        localStorage.setItem("phonesInCart", JSON.stringify([phonesInCart])); 
+    }
     //console.log(product);
     //if om inget finns i kundvagnen, lägg till i kundkorgen. 
     //Else lägg till produkten och skicka in igen
@@ -121,9 +128,5 @@ function addToCart(product) {
 }
 
 function addToCartCounter () {
-    if (!localStorage.getItem("phonesInCart")) { //eventuellt plural? products
-        localStorage.setItem("phonesInCart", JSON.stringify([product]));
-    } else {
-        const cartProducts = JSON.parse(localStorage.getItem("phonesInCart")); 
-    }
+    
 }
