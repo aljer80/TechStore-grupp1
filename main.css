@@ -96,6 +96,16 @@ p {
     font-size: 1.2rem;
 }
 
+.addCheckoutBtn {
+    background-color: #66B2FF;
+    color: #ffffff;
+    height: 2.5rem;
+    width: 18rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
 
 
 /* leta efter en lösning för att ändra ikonens färg */

@@ -36,12 +36,13 @@ function addProductsToWebpage() {
         phoneDivImage(product.image, phoneDiv);
         phoneDivPriceP(product.price, phoneDiv);
         phoneDivBtn(phoneDiv);
+        //checkoutBtn(phoneDiv); //vi testade att funktionen funkar
         main.appendChild(phoneDiv);
     }
     
 
     // Check your console to see that the products are stored in the listOfProducts varible.
-    console.log(listOfProducts);
+    //console.log(listOfProducts);
 
     // Add your code here, remember to brake your code in to smaller function blocks
     // to reduce complexity and increase readability. Each function should have
@@ -70,6 +71,19 @@ function phoneDivBtn (phoneDiv) {
     return phoneDivBtn;
 
 }
+//Här har vi provat att funktionen skapa utcheckningsknapp funkar
+
+// function checkoutBtn (phoneDiv) {
+//     const addCheckoutBtn =document.createElement("button");
+//     addCheckoutBtn.innerHTML = '<i class="fa-sharp fa-solid fa-check"></i>' + "Slutför ditt köp";
+//     addCheckoutBtn.classList.add("addCheckoutBtn");
+//     phoneDiv.appendChild(addCheckoutBtn);
+//     //console.log(checkoutBtn);
+    
+//     return checkoutBtn;
+
+// }
+
 
 function phoneDivTextP (description, phoneDiv) {
     const textP = document.createElement("p");
@@ -94,5 +108,4 @@ function phoneDivPriceP (price, phoneDiv) {
 
     return phoneDivPriceP;
 }
-
-
+//fsdklfjaöls
