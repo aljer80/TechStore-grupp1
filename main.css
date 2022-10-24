@@ -94,7 +94,9 @@ p {
     border: none;
     border-radius: 10px;
     font-size: 1.2rem;
+    cursor: pointer;
 }
+
 
 .addCheckoutBtn {
     background-color: #66B2FF;

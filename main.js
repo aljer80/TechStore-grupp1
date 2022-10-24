@@ -21,6 +21,7 @@ var main = document.querySelector("main");
 
 function initSite() {
     loadProducts();
+    addToCartCounter();
 }
 
 /** Uses the loaded products data to create a visible product list on the website */
@@ -118,15 +119,32 @@ function addToCart(product) {
     } else {
         const phonesInCart = JSON.parse(localStorage.getItem("phonesInCart")); 
         phonesInCart.push(product);
-        localStorage.setItem("phonesInCart", JSON.stringify([phonesInCart])); 
+        localStorage.setItem("phonesInCart", JSON.stringify(phonesInCart));
     }
     //console.log(product);
     //if om inget finns i kundvagnen, lägg till i kundkorgen. 
     //Else lägg till produkten och skicka in igen
 
     //localStorage.setItem("phoneInCart", JSON.stringify(shoppingCartItem)); //localStorage. Nyckel=phoneInCart
+    addToCartCounter();
 }
 
 function addToCartCounter () {
-    
+    const cartNumber = document.querySelector(".shopping-cart-number");
+
+    if (!localStorage.getItem("phonesInCart")) {
+        cartNumber.innerText = "";
+    } else {
+        var something = JSON.parse(localStorage.getItem("phonesInCart"));
+        var length = something.length;
+
+        cartNumber.innerText = length;
+    }
 }
+
+
+// function disableaddToCartBtn () {
+//     document.querySelector("addToCartBtn").disabled = true;
+// }
+
+
