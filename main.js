@@ -101,7 +101,7 @@ function phoneDivPriceP (price, phoneDiv) {
     return phoneDivPriceP;
 }
 
-//Function for creating the heading element in the phoneDiv  
+//Function for adding products to cart  
 function addToCart(product) {
     if (!localStorage.getItem("phonesInCart")) { 
         localStorage.setItem("phonesInCart", JSON.stringify([product]));
@@ -113,7 +113,7 @@ function addToCart(product) {
     addToCartCounter();
 }
 
-//Function for creating counter in the heading 
+//Function for creating counter in the header 
 function addToCartCounter () {
     const cartNumber = document.querySelector(".shopping-cart-number");
 
