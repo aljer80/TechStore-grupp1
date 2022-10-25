@@ -68,8 +68,17 @@ function phoneDivBtn (product, phoneDiv) {
     addToCartBtn.innerHTML = '<i class="fa-solid fa-cart-arrow-down"></i>' + "Lägg till i kundvagnen";
     addToCartBtn.classList.add("addToCartBtn");
     phoneDiv.appendChild(addToCartBtn);
-    addToCartBtn.addEventListener ("click", function() { addToCart(product) });
-    return phoneDivBtn;
+    addToCartBtn.addEventListener ("click", function() {
+        addToCart(product); 
+        addToCartBtn.disabled = true
+     });
+   
+     return phoneDivBtn;
+}
+
+function disabledBtn (button) {
+
+button.disabled = true;
 
 }
 //Här har vi provat att funktionen skapa utcheckningsknapp funkar
