@@ -27,10 +27,9 @@ function initSite() {
 /** Uses the loaded products data to create a visible product list on the website */
 function addProductsToWebpage() {
 
-    //Skapa en loop som kallar på index-items 0 till 3 från listOfProducts
+    // Loop that renders the content on the page 
     for (const product of listOfProducts) {
-        //funktion för att skapa div-element i main
-        const phoneDiv = document.createElement("div");
+        const phoneDiv = document.createElement("div"); //creating a div element and giving it a class name
         phoneDiv.classList.add("phone-div");
         phoneDivHeading(product.title, phoneDiv);
         phoneDivTextP(product.description, phoneDiv);
@@ -52,8 +51,7 @@ function addProductsToWebpage() {
 }
 
 
-//Functions for creating elements in the phoneDiv
-// funktion för att skapa phoneDivs innehåll. Frågor: hur puttar man inte värdena från JSON-filen i de olika skapade elementen? Skrivs det inom parantesen, och isf hur för att läsa in flera värden? Alla elementen ska apendas till phoneDiv och få värden från JSON inskrivna. 
+//Function for creating the heading element in the phoneDiv  
 function phoneDivHeading (title, phoneDiv) {
     const heading = document.createElement("h2");
     heading.innerText = title;
@@ -62,16 +60,18 @@ function phoneDivHeading (title, phoneDiv) {
     return phoneDivHeading;
 }
 
+//Function for creating the button (add to cart) in the phoneDiv  
 function phoneDivBtn (product, phoneDiv) {
     const addToCartBtn =document.createElement("button");
     addToCartBtn.innerHTML = '<i class="fa-solid fa-cart-arrow-down"></i>' + "Lägg till i kundvagnen";
     addToCartBtn.classList.add("addToCartBtn");
     phoneDiv.appendChild(addToCartBtn);
     addToCartBtn.addEventListener ("click", function() { addToCart(product) });
+    
     return phoneDivBtn;
-
 }
 
+//Function for creating the phone description in the phoneDiv  
 function phoneDivTextP (description, phoneDiv) {
     const textP = document.createElement("p");
     textP.innerText = description;
@@ -80,6 +80,7 @@ function phoneDivTextP (description, phoneDiv) {
     return phoneDivTextP;
 }
 
+//Function for creating the phone image in the phoneDiv  
 function phoneDivImage (image, phoneDiv) {
     const phoneImage = document.createElement("img")
     phoneImage.setAttribute("src", "/assets/" + image);
@@ -88,6 +89,7 @@ function phoneDivImage (image, phoneDiv) {
     return phoneDivImage;
 }
 
+//Function for creating the price in the phoneDiv  
 function phoneDivPriceP (price, phoneDiv) {
     const priceP = document.createElement("p");
     priceP.innerText = price + " kr";
@@ -96,6 +98,7 @@ function phoneDivPriceP (price, phoneDiv) {
     return phoneDivPriceP;
 }
 
+//Function for creating the heading element in the phoneDiv  
 function addToCart(product) {
     if (!localStorage.getItem("phonesInCart")) { 
         localStorage.setItem("phonesInCart", JSON.stringify([product]));
@@ -107,6 +110,7 @@ function addToCart(product) {
     addToCartCounter();
 }
 
+//Function for creating counter in the heading 
 function addToCartCounter () {
     const cartNumber = document.querySelector(".shopping-cart-number");
 
