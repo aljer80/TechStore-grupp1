@@ -37,7 +37,6 @@ function addProductsToWebpage() {
         phoneDivImage(product.image, phoneDiv);
         phoneDivPriceP(product.price, phoneDiv);
         phoneDivBtn(product, phoneDiv);
-        //checkoutBtn(phoneDiv); //vi testade att funktionen funkar
         main.appendChild(phoneDiv);
     }
     
@@ -72,19 +71,6 @@ function phoneDivBtn (product, phoneDiv) {
     return phoneDivBtn;
 
 }
-//Här har vi provat att funktionen skapa utcheckningsknapp funkar
-
-// function checkoutBtn (phoneDiv) {
-//     const addCheckoutBtn =document.createElement("button");
-//     addCheckoutBtn.innerHTML = '<i class="fa-sharp fa-solid fa-check"></i>' + "Slutför ditt köp";
-//     addCheckoutBtn.classList.add("addCheckoutBtn");
-//     phoneDiv.appendChild(addCheckoutBtn);
-//     //console.log(checkoutBtn);
-    
-//     return checkoutBtn;
-
-// }
-
 
 function phoneDivTextP (description, phoneDiv) {
     const textP = document.createElement("p");
@@ -109,23 +95,15 @@ function phoneDivPriceP (price, phoneDiv) {
 
     return phoneDivPriceP;
 }
-//fsdklfjaöls
-
-
 
 function addToCart(product) {
-    if (!localStorage.getItem("phonesInCart")) { //eventuellt plural? products
+    if (!localStorage.getItem("phonesInCart")) { 
         localStorage.setItem("phonesInCart", JSON.stringify([product]));
     } else {
         const phonesInCart = JSON.parse(localStorage.getItem("phonesInCart")); 
         phonesInCart.push(product);
         localStorage.setItem("phonesInCart", JSON.stringify(phonesInCart));
     }
-    //console.log(product);
-    //if om inget finns i kundvagnen, lägg till i kundkorgen. 
-    //Else lägg till produkten och skicka in igen
-
-    //localStorage.setItem("phoneInCart", JSON.stringify(shoppingCartItem)); //localStorage. Nyckel=phoneInCart
     addToCartCounter();
 }
 
@@ -142,9 +120,5 @@ function addToCartCounter () {
     }
 }
 
-
-// function disableaddToCartBtn () {
-//     document.querySelector("addToCartBtn").disabled = true;
-// }
 
 
