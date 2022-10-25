@@ -1,0 +1,168 @@
+/*FF6666 Ta bort knapp  66B2FF Lägg till/Slutför ditt köp, 202020 Alla svarta element, FFFFFF Alla vita element  */
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+main {
+    height: 100%;
+    position: relative;
+}
+
+/* header area */
+
+
+
+header h1 {
+    font-family: 'Secular One', sans-serif;
+    font-weight: 200;
+    font-size: 2.5rem;
+    color: #FFFFFF; 
+}
+
+header a { 
+    text-decoration: none;
+}
+
+.phone-div h2 {
+    font-family: 'Secular One', sans-serif;
+/*Find a better font*/
+
+}
+
+header {
+    height: 70px;
+    background-color: #202020;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items:center;
+    position: fixed;
+    margin-top: 0;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.hdiv-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hdiv-right p {
+    color: #FFFFFF;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-family: 'Secular One', sans-serif;
+    font-weight:lighter;
+    font-size: 2rem;
+}
+
+#shoppingcart {
+font-size: 2rem;
+color: #FFFFFF;
+}
+
+.fa-solid {
+    color: #202020;
+}
+
+/* title-div area plus title */
+
+.title-div {
+    height: 100px;
+    width: 100%;
+    color: #202020;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 70px;
+}
+
+.title-div i {
+    color: #202020;
+    margin: 5px;
+}
+
+/* mobile modells area */
+
+.phone-div-container {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top: 170px;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+
+.phone-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 200px;
+    width: 200px;
+
+}
+
+.phone-div img {
+    height: 150px;
+}
+
+.phone-div h2 {
+    font-size: 1rem;
+}
+
+p {
+    font-family: 'Secular One', sans-serif; 
+    margin: 10px; 
+}
+
+.addToCartBtn {
+    background-color: #66B2FF;
+    color: #ffffff;
+    height: 2.5rem;
+    width: 18rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+
+.addCheckoutBtn {
+    background-color: #66B2FF;
+    color: #ffffff;
+    height: 2.5rem;
+    width: 18rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+
+
+/* leta efter en lösning för att ändra ikonens färg */
+.fa-solid {
+    color: #fff;
+    background-color: transparent;
+}
+
+
+
+
+/* Styling för enheter med bredd på minst 768px här - padda*/
+
+@media screen and (min-width: 768px) { }
+
+/* Styling för enheter med bredd på minst 320-480px här - mobil*/
+
+@media screen and (min-width: 480) { }

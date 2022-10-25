@@ -1,6 +1,10 @@
 
 var main = document.querySelector("main");
 
+var phoneDivContainer = document.createElement("div");
+phoneDivContainer.classList.add("phone-div-container");
+main.appendChild(phoneDivContainer);
+
 let phonesInCart = JSON.parse(localStorage.getItem("phonesInCart")); 
 
 
@@ -8,7 +12,7 @@ let phonesInCart = JSON.parse(localStorage.getItem("phonesInCart"));
 function addProductsToShoppingCartPage(phonesInCart) {
 
     //Loop that calls the functions created below
-    for (const product of phonesInCart) {   //(const product of listOfProducts )
+    for (const product of phonesInCart) {   //  (const product of listOfProducts )
         const phoneDiv = document.createElement("div"); //function for creating the div-element in main
         //Function to render the products on the page 
         phoneDiv.classList.add("phone-div");
@@ -16,7 +20,7 @@ function addProductsToShoppingCartPage(phonesInCart) {
           phoneDivHeading(product.title, phoneDiv);
           phoneDivPriceP(product.price, phoneDiv);
         checkoutBtn(product, phoneDiv);
-        main.appendChild(phoneDiv);
+        phoneDivContainer.appendChild(phoneDiv);
     }
     
 }
