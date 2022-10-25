@@ -12,10 +12,10 @@ function addProductsToShoppingCartPage(phonesInCart) {
         const phoneDiv = document.createElement("div"); //function for creating the div-element in main
         //Function to render the products on the page 
         phoneDiv.classList.add("phone-div");
-          phoneDivImage(product.image, phoneDiv); 
-          phoneDivHeading(product.title, phoneDiv);
-          phoneDivPriceP(product.price, phoneDiv);
-        checkoutBtn(product, phoneDiv);
+        phoneDivImage(product.image, phoneDiv); 
+        phoneDivHeading(product.title, phoneDiv);
+        phoneDivPriceP(product.price, phoneDiv);
+        removePhoneBtn(product, phoneDiv);
         main.appendChild(phoneDiv);
     }
     
@@ -52,19 +52,20 @@ function phoneDivPriceP (price, phoneDiv) {
 }
 
 //Function for creating the checkout button
-function checkoutBtn (product, phoneDiv) {
-    const addCheckoutBtn =document.createElement("button");
-    addCheckoutBtn.innerHTML = '<i class="fa-sharp fa-solid fa-check"></i>' + "Slutför ditt köp";
-    addCheckoutBtn.classList.add("addCheckoutBtn");
-    phoneDiv.appendChild(addCheckoutBtn);
-    //console.log(checkoutBtn);
+function removePhoneBtn (product, phoneDiv) {
+    const removePhoneBtn =document.createElement("button");
+    removePhoneBtn.innerHTML = '<i class="fa-regular fa-trash-can"></i>' + "Slutför ditt köp";
+    removePhoneBtn.classList.add("removePhoneBtn");
+    phoneDiv.appendChild(removePhoneBtn);
+    console.log(removePhoneBtn);
     
-    return checkoutBtn;
+    return removePhoneBtn;
 }
+
 
 addProductsToShoppingCartPage(phonesInCart);
 
-
+//addCheckoutBtn.innerHTML = '<i class="fa-sharp fa-solid fa-check"></i>' + "Slutför ditt köp";
 
 //när man trycker på slutför köp kommer man till en helt ny html-sida (bekräftelse, kan klicka på länk till startsidan)
 
