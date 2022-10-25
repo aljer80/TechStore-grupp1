@@ -74,12 +74,6 @@ function phoneDivBtn (product, phoneDiv) {
      return phoneDivBtn;
 }
 
-function disabledBtn (button) {
-
-button.disabled = true;
-
-}
-
 //Function for creating the phone description in the phoneDiv  
 function phoneDivTextP (description, phoneDiv) {
     const textP = document.createElement("p");
