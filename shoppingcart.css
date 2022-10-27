@@ -11,7 +11,7 @@
 
 main {
     height: 100%;
-    position: relative;
+    /*position: relative;*/
 }
 
 /* header area */
@@ -81,7 +81,7 @@ color: #FFFFFF;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    /*position: absolute;*/
     top: 70px;
 }
 
@@ -94,12 +94,13 @@ color: #FFFFFF;
 
 .phone-div-container {
     display: flex;
-    width: 100%;
-    position: absolute;
+    width: 100vw;
+    height: 400px;
+    /*position: absolute;*/
     top: 170px;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    gap: 25px;
 }
 
 
@@ -108,9 +109,10 @@ color: #FFFFFF;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 200px;
+    height: 300px;
     width: 200px;
-
+    border: 2px solid blue;
+    border-radius: 10px;
 }
 
 .phone-div img {
@@ -118,8 +120,9 @@ color: #FFFFFF;
 }
 
 .phone-div h2 {
-    font-size: 1rem;
+    font-size: 2rem;
 }
+
 
 p {
     font-family: 'Secular One', sans-serif; 
@@ -152,11 +155,25 @@ p {
     background-color: #FF6666;
     color: #ffffff;
     height: 2.5rem;
-    width: 18rem;
+    width: 60%;
     border: none;
     border-radius: 10px;
-    font-size: 1.2rem;  
+    font-size: 1rem;  
 }
+
+
+.removePhoneBtn i {
+    margin-right: 15px;
+}
+
+/* Completion of purchase div and p */
+
+.total-cost-div {
+    height: 200px;
+    background-color: red;
+}
+
+
 
 /* leta efter en lösning för att ändra ikonens färg */
 .fa-solid {

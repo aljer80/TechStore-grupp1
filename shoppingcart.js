@@ -1,7 +1,21 @@
 var main = document.querySelector("main");
 
-let phonesInCart = JSON.parse(localStorage.getItem("phonesInCart")); 
+let phonesInCart = JSON.parse(localStorage.getItem("phonesInCart"));
 
+
+var titleDiv = document.createElement("div");
+titleDiv.classList.add("title-div");
+var phoneDivContainer = document.createElement("div");
+phoneDivContainer.classList.add("phone-div-container");
+var totalCostDiv = document.createElement("div");
+totalCostDiv.classList.add("total-cost-div");
+//totalCostDiv.appendChild(totalCostP); Få in totalCostP i totalCostDiv utan att det förstör renderingen - hur?
+
+
+
+main.appendChild(titleDiv);
+main.appendChild(phoneDivContainer);
+main.appendChild(totalCostDiv);
 
 /** Uses the array phonesInCart to create a visible product list on the website */
 function addProductsToShoppingCartPage(phonesInCart) {
@@ -15,7 +29,10 @@ function addProductsToShoppingCartPage(phonesInCart) {
         phoneDivHeading(product.title, phoneDiv);
         phoneDivPriceP(product.price, phoneDiv);
         removePhoneBtn(product, phoneDiv);
-        main.appendChild(phoneDiv);
+        
+
+        phoneDivContainer.appendChild(phoneDiv);
+        
     }
     
 }
@@ -49,6 +66,17 @@ function phoneDivPriceP (price, phoneDiv) {
     phoneDiv.appendChild(priceP);
 
     return phoneDivPriceP;
+}
+
+//Function totalCost
+
+
+function totalCostP (totalCostDiv) {
+    const totalCostP = document.createElement("p");
+    totalCostP.innerText = "Total pris: ";
+    totalCostDiv.appendChild(totalCostP);
+
+    return totalCostP;
 }
 
 //Function for creating the button "remove from shopping cart" and for removing items from the shoppingcart
