@@ -148,7 +148,15 @@ p {
     font-size: 1.2rem;
 }
 
-
+.removePhoneBtn {
+    background-color: #FF6666;
+    color: #ffffff;
+    height: 2.5rem;
+    width: 18rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;  
+}
 
 /* leta efter en lösning för att ändra ikonens färg */
 .fa-solid {
