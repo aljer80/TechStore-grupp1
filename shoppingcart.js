@@ -62,17 +62,17 @@ function removePhoneBtn (product, phoneDiv) {
     return removePhoneBtn;
 }
 
+function removePhoneFromCart(product) {
+    localStorage.getItem("phonesInCart");
+    const phonesInCart = JSON.parse(localStorage.getItem("phonesInCart")); 
+    const index = phonesInCart.indexOf(product);
+    phonesInCart.splice(index, 1); // https://www.w3schools.com/jsref/jsref_splice.asp
+    localStorage.getItem("phonesInCart");
+    //JSON.parse(localStorage.getItem("phonesInCart")); 
+    localStorage.setItem("phonesInCart", JSON.stringify(phonesInCart));
 
-// // Under bearbetning
-// function removePhoneFromCart(event) {
-//     const index = phonesInCart.indexOf(e.target);
-//     phonesInCart.splice(index, 1); // https://www.w3schools.com/jsref/jsref_splice.asp
+}
 
-
-//     (localStorage.getItem("phonesInCart")) { 
-//     const phonesInCart = JSON.parse(localStorage.getItem("phonesInCart")); 
-//     localStorage.setItem("phonesInCart", JSON.stringify(phonesInCart));
-//     }
 //     //console.log(product);
 //     //if om inget finns i kundvagnen, lägg till i kundkorgen. 
 //     //Else lägg till produkten och skicka in igen
