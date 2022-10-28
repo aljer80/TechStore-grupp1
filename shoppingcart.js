@@ -2,11 +2,18 @@ var main = document.querySelector("main");
 
 var titleDiv = document.createElement("div");
 titleDiv.classList.add("title-div");
+const titleDivH2 = document.createElement("h2");
+titleDivH2.innerHTML = '<i class="fa-solid fa-cart-shopping"></i>' + " Kundvagn";
+
 var phoneDivContainer = document.createElement("div");
 phoneDivContainer.classList.add("phone-div-container");
 var totalCostDiv = document.createElement("div");
 totalCostDiv.classList.add("total-cost-div");
 
+
+totalCostP();
+
+titleDiv.appendChild(titleDivH2);
 main.appendChild(titleDiv);
 main.appendChild(phoneDivContainer);
 main.appendChild(totalCostDiv);
@@ -27,7 +34,6 @@ phoneDivContainer.innerHTML=""
                 const phoneDiv = document.createElement("div"); //function for creating the div-element in main
                 //Function to render the products on the page 
                 phoneDiv.classList.add("phone-div");
-                phoneDiv.id = product.title;
                 phoneDivImage(product.image, phoneDiv); 
                 phoneDivHeading(product.title, phoneDiv);
                 phoneDivPriceP(product.price, phoneDiv);
@@ -67,13 +73,31 @@ function phoneDivPriceP (price, phoneDiv) {
     return phoneDivPriceP;
 }
 
-//Function totalCost
-function totalCostP (totalCostDiv) {
-    const totalCostP = document.createElement("p");
-    totalCostP.innerText = "Total pris: ";
+
+//Function for creating totalPriceP's div
+function totalCostDiv (totalCostP) {
+    var totalCostDiv = document.createElement("div");
+    totalCostDiv.classList.add("total-cost-div");
     totalCostDiv.appendChild(totalCostP);
 
-    return totalCostP;
+    return totalCostDiv;
+};
+
+//Function totalCost
+function totalCostP () {
+     const phonesInCart = JSON.parse(localStorage.getItem("phonesInCart")); 
+
+     for (const product of phonesInCart) {
+         var sum = 0;
+         phonesInCart.forEach(function(product) {
+             sum += product.price;
+         });
+     }
+
+    const totalCostP = document.createElement("p");
+     totalCostP.innerText = "Total pris: " + sum;
+     totalCostDiv.appendChild(totalCostP);
+
 }
 
 //Function for creating the button "remove from shopping cart" and for removing items from the shoppingcart
@@ -87,6 +111,7 @@ function removePhoneBtn (product, phoneDiv) {
     return removePhoneBtn;
 }
 
+//Function that removes phone/s/ from cart
 function removePhoneFromCart(product) {
     const phonesInCart = JSON.parse(localStorage.getItem("phonesInCart")); 
     const index = phonesInCart.indexOf(product);
