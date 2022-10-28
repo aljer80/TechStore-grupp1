@@ -11,7 +11,8 @@
 
 main {
     height: 100%;
-    /*position: relative;*/
+    position: relative;
+    top: 70px;
 }
 
 /* header area */
@@ -75,6 +76,7 @@ color: #FFFFFF;
 /* title-div area plus title */
 
 .title-div {
+    background-color: red;
     height: 100px;
     width: 100%;
     color: #202020;
