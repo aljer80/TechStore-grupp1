@@ -76,7 +76,6 @@ color: #FFFFFF;
 /* title-div area plus title */
 
 .title-div {
-    background-color: red;
     height: 100px;
     width: 100%;
     color: #202020;
@@ -85,6 +84,7 @@ color: #FFFFFF;
     align-items: center;
     /*position: absolute;*/
     top: 70px;
+    font-size: 1.4rem;
 }
 
 .title-div i {
@@ -95,9 +95,10 @@ color: #FFFFFF;
 /* mobile modells area */
 
 .phone-div-container {
+   
     display: flex;
     width: 100vw;
-    height: 400px;
+    height: 300px;
     /*position: absolute;*/
     top: 170px;
     justify-content: center;
@@ -113,7 +114,7 @@ color: #FFFFFF;
     flex-direction: column;
     height: 300px;
     width: 200px;
-    border: 2px solid blue;
+    border: 2px solid #66B2FF;
     border-radius: 10px;
 }
 
@@ -171,8 +172,12 @@ p {
 /* Completion of purchase div and p */
 
 .total-cost-div {
-    height: 200px;
-    background-color: red;
+    margin-top: 25px;
+    height: 50px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 

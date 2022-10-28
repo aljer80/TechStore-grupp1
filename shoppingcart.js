@@ -86,7 +86,7 @@ function totalCostDiv (totalCostP) {
 //Function totalCost
 function totalCostP () {
      const phonesInCart = JSON.parse(localStorage.getItem("phonesInCart")); 
-
+    
      for (const product of phonesInCart) {
          var sum = 0;
          phonesInCart.forEach(function(product) {
@@ -95,7 +95,7 @@ function totalCostP () {
      }
 
     const totalCostP = document.createElement("p");
-     totalCostP.innerText = "Total pris: " + sum;
+     totalCostP.innerText = "Total pris: " + sum + " kr";
      totalCostDiv.appendChild(totalCostP);
 
 }
