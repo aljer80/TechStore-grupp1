@@ -3,16 +3,22 @@ var main = document.querySelector("main");
 let phonesInCart = JSON.parse(localStorage.getItem("phonesInCart"));
 
 
-var titleDiv = document.createElement("div");
+// Creates the "Kundvagn" title and icon for the titleDiv-area
+const titleDiv = document.createElement("div");
 titleDiv.classList.add("title-div");
+const titleDivH2 = document.createElement("h2");
+titleDivH2.innerHTML = '<i class="fa-solid fa-cart-shopping"></i>' + " Kundvagn";
+
+
 var phoneDivContainer = document.createElement("div");
 phoneDivContainer.classList.add("phone-div-container");
 var totalCostDiv = document.createElement("div");
 totalCostDiv.classList.add("total-cost-div");
-//totalCostDiv.appendChild(totalCostP); Få in totalCostP i totalCostDiv utan att det förstör renderingen - hur?
 
 
+totalCostP();
 
+titleDiv.appendChild(titleDivH2);
 main.appendChild(titleDiv);
 main.appendChild(phoneDivContainer);
 main.appendChild(totalCostDiv);
@@ -69,15 +75,38 @@ function phoneDivPriceP (price, phoneDiv) {
     return phoneDivPriceP;
 }
 
+
+//Function for creating totalPriceP's div
+
+function totalCostDiv (totalCostP) {
+    var totalCostDiv = document.createElement("div");
+    totalCostDiv.classList.add("total-cost-div");
+    totalCostDiv.appendChild(totalCostP);
+
+    return totalCostDiv;
+};
+
 //Function totalCost
 
 
-function totalCostP (totalCostDiv) {
-    const totalCostP = document.createElement("p");
-    totalCostP.innerText = "Total pris: ";
-    totalCostDiv.appendChild(totalCostP);
+function totalCostP () {
+     const phonesInCart = JSON.parse(localStorage.getItem("phonesInCart")); 
 
-    return totalCostP;
+    
+
+     for (const product of phonesInCart) {
+         var sum = 0;
+         phonesInCart.forEach(function(product) {
+             sum += product.price;
+         });
+     }
+
+
+    const totalCostP = document.createElement("p");
+     totalCostP.innerText = "Total pris: " + sum;
+     totalCostDiv.appendChild(totalCostP);
+
+
 }
 
 //Function for creating the button "remove from shopping cart" and for removing items from the shoppingcart
