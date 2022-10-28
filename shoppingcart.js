@@ -74,7 +74,7 @@ function removePhoneFromCart(product) {
     document.getElementById(product.title).remove();
 }
 
-
+//Function räkna ut summan
 
 
 
