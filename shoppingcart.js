@@ -11,6 +11,7 @@ function addProductsToShoppingCartPage(phonesInCart) {
         const phoneDiv = document.createElement("div"); //function for creating the div-element in main
         //Function to render the products on the page 
         phoneDiv.classList.add("phone-div");
+        phoneDiv.id = product.title;
         phoneDivImage(product.image, phoneDiv); 
         phoneDivHeading(product.title, phoneDiv);
         phoneDivPriceP(product.price, phoneDiv);
@@ -63,29 +64,21 @@ function removePhoneBtn (product, phoneDiv) {
 }
 
 function removePhoneFromCart(product) {
-    localStorage.getItem("phonesInCart");
-    const phonesInCart = JSON.parse(localStorage.getItem("phonesInCart")); 
+    //localStorage.getItem("phonesInCart");
+    //const phonesInCart = JSON.parse(localStorage.getItem("phonesInCart")); 
     const index = phonesInCart.indexOf(product);
     phonesInCart.splice(index, 1); // https://www.w3schools.com/jsref/jsref_splice.asp
-    localStorage.getItem("phonesInCart");
+    //localStorage.getItem("phonesInCart");
     //JSON.parse(localStorage.getItem("phonesInCart")); 
     localStorage.setItem("phonesInCart", JSON.stringify(phonesInCart));
-
+    document.getElementById(product.title).remove();
 }
 
-//     //console.log(product);
-//     //if om inget finns i kundvagnen, lägg till i kundkorgen. 
-//     //Else lägg till produkten och skicka in igen
 
-//     //localStorage.setItem("phoneInCart", JSON.stringify(shoppingCartItem)); //localStorage. Nyckel=phoneInCart
-//     addToCartCounter();
-// }
 
-// //modell från Get things done
-// function removeItem(e) {
-//     const index = todos.indexOf(e.target.innerText); //vilket index ligger den här texten inom parantes på?
-//         todos.splice(index, 1); //splicea på index som är vår startposition. 
-//         myFunction(); //när vi har tagit bort elementet vill vi rendera ut det igen. 
+
+
+
 
 // //addCheckoutBtn.innerHTML = '<i class="fa-sharp fa-solid fa-check"></i>' + "Slutför ditt köp";
 
