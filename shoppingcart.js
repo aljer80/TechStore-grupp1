@@ -17,6 +17,7 @@ titleDiv.appendChild(titleDivH2);
 main.appendChild(titleDiv);
 main.appendChild(phoneDivContainer);
 main.appendChild(totalCostDiv);
+main.appendChild(checkoutBtnDiv());
 
 addProductsToShoppingCartPage();
 
@@ -119,3 +120,18 @@ function removePhoneFromCart(product) {
     localStorage.setItem("phonesInCart", JSON.stringify(phonesInCart));
     addProductsToShoppingCartPage(); //single source of truth
 }
+
+function checkoutBtnDiv() {
+    const checkoutBtnDiv = document.createElement("div");
+    checkoutBtnDiv.classList.add("checkoutBtn-div");
+    checkoutBtn(checkoutBtnDiv);
+
+    return checkoutBtnDiv;
+}
+
+ function checkoutBtn (checkoutBtnDiv){
+    const checkoutBtn = document.createElement("button");
+    checkoutBtn.innerHTML = '<i class= "fa-sharp fa-solid fa-check"></i>' + "Slutför ditt köp";
+    checkoutBtn.classList.add("ckeckoutBtn");
+    checkoutBtnDiv.appendChild(checkoutBtn); 
+ }
