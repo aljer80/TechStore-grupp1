@@ -113,12 +113,15 @@ function removePhoneBtn (product, phoneDiv) {
 }
 
 //Function that removes phone/s/ from cart
-function removePhoneFromCart(product) {
+function removePhoneFromCart(product, totalCostP) {
     const phonesInCart = JSON.parse(localStorage.getItem("phonesInCart")); 
     const index = phonesInCart.indexOf(product);
     phonesInCart.splice(index, 1); // https://www.w3schools.com/jsref/jsref_splice.asp
     localStorage.setItem("phonesInCart", JSON.stringify(phonesInCart));
     addProductsToShoppingCartPage(); //single source of truth
+
+    
+
 }
 
 function checkoutBtnDiv() {
@@ -132,6 +135,15 @@ function checkoutBtnDiv() {
  function checkoutBtn (checkoutBtnDiv){
     const checkoutBtn = document.createElement("button");
     checkoutBtn.innerHTML = '<i class= "fa-sharp fa-solid fa-check"></i>' + "Slutför ditt köp";
-    checkoutBtn.classList.add("ckeckoutBtn");
+    checkoutBtn.classList.add("checkoutBtn");
     checkoutBtnDiv.appendChild(checkoutBtn); 
- }
+
+    checkoutBtn.addEventListener("click", () => {
+        location.href = "purchasecomplete.html";
+    });
+   
+
+ };
+
+ // checkoutBtn.addEventListener("click", addLink);
+
