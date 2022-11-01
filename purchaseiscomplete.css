@@ -35,20 +35,6 @@ header {
     padding-right: 25px;
 }
 
-.hdiv-right {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.hdiv-right p {
-    color: #FFFFFF;
-    padding-left: 5px;
-    padding-right: 5px;
-    font-family: 'Secular One', sans-serif;
-    font-weight:lighter;
-    font-size: 2rem;
-}
 
 #shoppingcart {
 font-size: 2rem;
@@ -60,10 +46,28 @@ color: #FFFFFF;
 }
 
 main {
-    height: calc(100vh - 70px);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #FFFFFF;
+}
+
+.messageDiv {
+    margin-top: 350px;
+    margin-bottom: 50px;
+    font-family: 'Secular One';
+    font-size: 1.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.returnToStartDiv {
+    margin-top: 15px;
+    margin-bottom: 15px;
+
 }
 
 
