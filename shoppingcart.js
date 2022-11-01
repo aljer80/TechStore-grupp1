@@ -24,7 +24,7 @@ addProductsToShoppingCartPage();
 //Uses the array phonesInCart to create a visible product list on the website 
 function addProductsToShoppingCartPage() {
     let phonesInCart = JSON.parse(localStorage.getItem("phonesInCart"));
-phoneDivContainer.innerHTML=""
+    phoneDivContainer.innerHTML=""
     //function that renders the content in the shopping cart
             if (!localStorage.getItem("phonesInCart") || phonesInCart.length <=0 ) {
             const emptyCartP = document.createElement("p"); 
@@ -145,5 +145,5 @@ function checkoutBtnDiv() {
 
  };
 
- // checkoutBtn.addEventListener("click", addLink);
+ 
 
