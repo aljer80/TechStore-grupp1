@@ -10,7 +10,7 @@
 
 
 main {
-    height: 100%;
+    
     position: relative;
     top: 70px;
 }
@@ -47,6 +47,7 @@ header {
     margin-top: 0;
     padding-left: 25px;
     padding-right: 25px;
+    z-index: 1;
 }
 
 .hdiv-right {
@@ -95,10 +96,9 @@ color: #FFFFFF;
 /* mobile modells area */
 
 .phone-div-container {
-   
     display: flex;
+    flex-wrap: wrap;
     width: 100vw;
-    height: 400px;
     /*position: absolute;*/
     top: 170px;
     justify-content: center;
@@ -113,7 +113,7 @@ color: #FFFFFF;
     align-items: center;
     flex-direction: column;
     height: 300px;
-    width: 200px;
+    padding: 10px;
     border: 2px solid #66B2FF;
     border-radius: 10px;
 }
