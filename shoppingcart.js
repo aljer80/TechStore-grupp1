@@ -20,7 +20,6 @@ main.appendChild(totalCostDiv);
 main.appendChild(checkoutBtnDiv());
 
 addProductsToShoppingCartPage();
-//addToCartCounter();
 
 //Uses the array phonesInCart to create a visible product list on the website 
 function addProductsToShoppingCartPage() {
@@ -88,6 +87,10 @@ function totalCostDiv (totalCostP) {
 
 //Function totalCost
 function totalCostP () {
+    const totalCostElement = document.querySelector(".total-cost");
+    if (totalCostElement){
+        totalCostElement.remove();
+    }
      const phonesInCart = JSON.parse(localStorage.getItem("phonesInCart")); 
     
      for (const product of phonesInCart) {
@@ -98,6 +101,7 @@ function totalCostP () {
      }
 
     const totalCostP = document.createElement("p");
+    totalCostP.classList.add("total-cost");
      totalCostP.innerText = "Total pris: " + sum + " kr";
      totalCostDiv.appendChild(totalCostP);
 
@@ -109,19 +113,19 @@ function removePhoneBtn (product, phoneDiv) {
     removePhoneBtn.innerHTML = '<i class="fa-regular fa-trash-can"></i>' + "Ta bort";
     removePhoneBtn.classList.add("removePhoneBtn");
     phoneDiv.appendChild(removePhoneBtn);
-    removePhoneBtn.addEventListener("click", function () { removePhoneFromCart(product) });
+    removePhoneBtn.addEventListener("click", function () { removePhoneFromCart(product)});
     
     return removePhoneBtn;
 }
 
 //Function that removes phone/s/ from cart
-function removePhoneFromCart(product, totalCostP) {
+function removePhoneFromCart(product) {
     const phonesInCart = JSON.parse(localStorage.getItem("phonesInCart")); 
     const index = phonesInCart.indexOf(product);
     phonesInCart.splice(index, 1); // https://www.w3schools.com/jsref/jsref_splice.asp
     localStorage.setItem("phonesInCart", JSON.stringify(phonesInCart));
     addProductsToShoppingCartPage(); //single source of truth
-
+    totalCostP ();
     
 
 }
