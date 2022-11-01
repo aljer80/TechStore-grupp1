@@ -28,7 +28,8 @@ function addProductsToShoppingCartPage() {
     addToCartCounter();
     //function that renders the content in the shopping cart
             if (!localStorage.getItem("phonesInCart") || phonesInCart.length <=0 ) {
-            const emptyCartP = document.createElement("p"); 
+            const emptyCartP = document.createElement("p");
+            emptyCartP.classList.add("empty-message")
              phoneDivContainer.appendChild(emptyCartP);
              emptyCartP.innerHTML = "Din kundkorg är tom";
         } else {
@@ -90,8 +91,28 @@ function totalCostP () {
     const totalCostElement = document.querySelector(".total-cost");
     if (totalCostElement){
         totalCostElement.remove();
+    } 
+
+    const phonesInCart = JSON.parse(localStorage.getItem("phonesInCart")); 
+
+    if (!localStorage.getItem("phonesInCart") || phonesInCart.length <=0 ) {
+
+        const emptyMessage = document.querySelector(".empty-message");
+
+        if (emptyMessage) {
+            emptyMessage.remove();
+        }
+
+
+        const emptyCartP = document.createElement("p"); 
+        emptyCartP.classList.add("empty-message")
+         phoneDivContainer.appendChild(emptyCartP);
+
+         emptyCartP.innerHTML = "Din kundkorg är tom";
+         return;
     }
-     const phonesInCart = JSON.parse(localStorage.getItem("phonesInCart")); 
+    
+    
     
      for (const product of phonesInCart) {
          var sum = 0;
