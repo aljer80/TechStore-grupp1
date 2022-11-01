@@ -20,11 +20,7 @@ header a {
     text-decoration: none;
 }
 
-.phone-div h2 {
-    font-family: 'Secular One', sans-serif;
-/*Find a better font*/
 
-}
 
 header {
     height: 70px;
@@ -60,77 +56,27 @@ color: #FFFFFF;
 }
 
 .fa-solid {
-    color: #202020;
+    color: #fff;
 }
 
-/* mobile modells area */
-
-.phone-div {
+main {
+    height: calc(100vh - 70px);
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    height: 100vh;
 }
 
-.phone-div img {
-    height: 400px;
-}
 
-.phone-div h2 {
-    font-size: 2.5rem;
-}
 
-p {
-    font-family: 'Secular One', sans-serif; 
-    margin: 10px; 
-}
 
-.addToCartBtn {
+
+
+.returnToStartBtn {
+    height: 50px;
+    width: 220px;
+    border-radius: 5px;
     background-color: #66B2FF;
-    color: #ffffff;
-    height: 2.5rem;
-    width: 18rem;
-    border: none;
-    border-radius: 10px;
     font-size: 1.2rem;
-    cursor: pointer;
-}
-
-/* Suggestion for styling button disabled */
-button:disabled{
-    pointer-events: none;
-    opacity: .65;
-}
-
-.addCheckoutBtn {
-    background-color: #66B2FF;
-    color: #ffffff;
-    height: 2.5rem;
-    width: 18rem;
-    border: none;
-    border-radius: 10px;
-    font-size: 1.2rem;
-}
-
-
-
-/* leta efter en lösning för att ändra ikonens färg */
-.fa-solid {
     color: #fff;
-    background-color: transparent;
+    border: none;
 }
-
-
-
-
-
-
-
-/* Styling för enheter med bredd på minst 768px här - padda*/
-
-@media screen and (min-width: 768px) { }
-
-/* Styling för enheter med bredd på minst 320-480px här - mobil*/
-
-@media screen and (min-width: 480) { }
