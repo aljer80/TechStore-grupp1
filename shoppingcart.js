@@ -20,11 +20,13 @@ main.appendChild(totalCostDiv);
 main.appendChild(checkoutBtnDiv());
 
 addProductsToShoppingCartPage();
+//addToCartCounter();
 
 //Uses the array phonesInCart to create a visible product list on the website 
 function addProductsToShoppingCartPage() {
     let phonesInCart = JSON.parse(localStorage.getItem("phonesInCart"));
     phoneDivContainer.innerHTML=""
+    addToCartCounter();
     //function that renders the content in the shopping cart
             if (!localStorage.getItem("phonesInCart") || phonesInCart.length <=0 ) {
             const emptyCartP = document.createElement("p"); 
@@ -145,5 +147,17 @@ function checkoutBtnDiv() {
 
  };
 
- 
+ function addToCartCounter () {
+    const cartNumber = document.querySelector(".shopping-cart-number");
+
+    if (!localStorage.getItem("phonesInCart")) {
+        cartNumber.innerText = "";
+    } else {
+        var something = JSON.parse(localStorage.getItem("phonesInCart"));
+        var length = something.length;
+
+        cartNumber.innerText = length;
+    }
+}
+
 
