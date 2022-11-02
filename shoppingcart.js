@@ -10,14 +10,15 @@ phoneDivContainer.classList.add("phone-div-container");
 var totalCostDiv = document.createElement("div");
 totalCostDiv.classList.add("total-cost-div");
 
-
+checkoutBtnDisplay();
 totalCostP();
 
 titleDiv.appendChild(titleDivH2);
 main.appendChild(titleDiv);
 main.appendChild(phoneDivContainer);
 main.appendChild(totalCostDiv);
-main.appendChild(checkoutBtnDiv());
+
+
 
 addProductsToShoppingCartPage();
 
@@ -147,30 +148,54 @@ function removePhoneFromCart(product) {
     phonesInCart.splice(index, 1); // https://www.w3schools.com/jsref/jsref_splice.asp
     localStorage.setItem("phonesInCart", JSON.stringify(phonesInCart));
     addProductsToShoppingCartPage(); //single source of truth
+    checkoutBtnDisplay ();
     totalCostP ();
 }
 
-function checkoutBtnDiv() {
-    const checkoutBtnDiv = document.createElement("div");
-    checkoutBtnDiv.classList.add("checkoutBtn-div");
-    checkoutBtn(checkoutBtnDiv);
+//  function checkoutBtnDiv() {
+//     const checkoutBtnDiv = document.createElement("div");
+//     checkoutBtnDiv.classList.add("checkoutBtn-div");
+//     checkoutBtn(checkoutBtnDiv);
 
-    return checkoutBtnDiv;
-}
+//     return checkoutBtnDiv;
+// }
 
- function checkoutBtn (checkoutBtnDiv){
-    const checkoutBtn = document.createElement("button");
-    checkoutBtn.innerHTML = '<i class= "fa-sharp fa-solid fa-check"></i>' + "Slutför ditt köp";
-    checkoutBtn.classList.add("checkoutBtn");
-    checkoutBtnDiv.appendChild(checkoutBtn); 
+//  function checkoutBtn (checkoutBtnDiv){
+//     const phonesInCart = JSON.parse(localStorage.getItem("phonesInCart"));
 
-    checkoutBtn.addEventListener("click", () => {
-        location.href = "purchasecomplete.html";
-        localStorage.clear();
-    });
-   
- }
+    // if (phonesInCart && phonesInCart.length > 0) {
+    //     const checkoutBtn = document.createElement("button");
+    //     checkoutBtn.innerHTML = '<i class= "fa-sharp fa-solid fa-check"></i>' + "Slutför ditt köp";
+    //     checkoutBtn.classList.add("checkoutBtn");
+    //     checkoutBtnDiv.appendChild(checkoutBtn); 
 
+    //     checkoutBtn.addEventListener("click", () => {
+    //         location.href = "purchasecomplete.html";
+    //         localStorage.clear();
+    // });
+    // }; 
+    
+ 
+//  }
+
+
+
+function checkoutBtnDisplay () {
+    const checkoutBtn = document.querySelector(".checkoutBtn-div");
+    const phonesInCart = JSON.parse(localStorage.getItem("phonesInCart"));
+    if (phonesInCart && phonesInCart.length > 0) {
+        checkoutBtn.style.display = "flex";
+    } else {
+        checkoutBtn.style.display = "none";
+    }
+
+
+ checkoutBtn.addEventListener("click", () => {
+    location.href = "purchasecomplete.html";
+    localStorage.clear();
+});
+};
+ 
  function addToCartCounter () {
     const cartNumber = document.querySelector(".shopping-cart-number");
 

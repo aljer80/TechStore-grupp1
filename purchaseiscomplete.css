@@ -74,8 +74,6 @@ main {
 
 
 
-
-
 .returnToStartBtn {
     height: 50px;
     width: 220px;
@@ -84,4 +82,85 @@ main {
     font-size: 1.2rem;
     color: #fff;
     border: none;
+}
+
+/* Styling för enheter med bredd på minst 768px här - padda*/
+
+@media screen and (max-width: 768px) { 
+    header i {
+        font-size: 1.5rem;
+    }
+
+    .hdiv-right p {
+        font-size: 1.5rem;
+    }
+
+    .hdiv-left h1 {
+        font-size: 1.5rem;
+    }   
+
+    .phone-div {
+        min-width: 150px;
+    }
+    
+    .phone-div img {
+        height: 150px;
+    }
+    
+    .phone-div h2 {
+        font-size: 2rem;
+    }
+    
+    
+    p {
+        margin: 10px; 
+    }
+}
+
+/* Styling för enheter med bredd på minst 320-480px här - mobil*/
+
+@media screen and (max-width: 320px)  {
+/* header area */
+.hdiv-left h1 {
+        font-size: 1rem;
+}
+
+header {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.hdiv-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hdiv-right p {
+    font-weight:lighter;
+    
+}
+
+.shopping-cart-number {
+font-size: 1.5rem;
+}
+
+/* title-div area plus title */
+.title-div {
+    height: 100px;
+    width: 100%;
+    color: #202020;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*position: absolute;*/
+    top: 70px;
+    font-size: 1.4rem;
+}
+
+.title-div i {
+    color: #202020;
+    margin: 5px;
+}
+
 }
