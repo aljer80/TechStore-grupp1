@@ -166,6 +166,7 @@ function checkoutBtnDiv() {
 
     checkoutBtn.addEventListener("click", () => {
         location.href = "purchasecomplete.html";
+        localStorage.clear();
     });
    
  }
