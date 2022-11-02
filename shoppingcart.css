@@ -1,24 +1,21 @@
 /*FF6666 Ta bort knapp  66B2FF Lägg till/Slutför ditt köp, 202020 Alla svarta element, FFFFFF Alla vita element  */
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+   
 }
 
-
-
 main {
-    
+    font-family: 'Roboto', sans-serif;
     position: relative;
     top: 70px;
 }
 
 /* header area */
-
-
-
 header h1 {
     font-family: 'Secular One', sans-serif;
     font-weight: 200;
@@ -32,8 +29,6 @@ header a {
 
 .phone-div h2 {
     font-family: 'Secular One', sans-serif;
-/*Find a better font*/
-
 }
 
 header {
@@ -58,11 +53,13 @@ header {
 
 .hdiv-right p {
     color: #FFFFFF;
-    padding-left: 5px;
-    padding-right: 5px;
-    font-family: 'Secular One', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight:lighter;
-    font-size: 2rem;
+    
+}
+
+.shopping-cart-number {
+font-size: 2.5rem;
 }
 
 #shoppingcart {
@@ -75,7 +72,6 @@ color: #FFFFFF;
 }
 
 /* title-div area plus title */
-
 .title-div {
     height: 100px;
     width: 100%;
@@ -108,6 +104,8 @@ color: #FFFFFF;
 
 
 .phone-div {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -116,6 +114,7 @@ color: #FFFFFF;
     padding: 10px;
     border: 2px solid #66B2FF;
     border-radius: 10px;
+    min-width: 200px;
 }
 
 .phone-div img {
@@ -123,12 +122,12 @@ color: #FFFFFF;
 }
 
 .phone-div h2 {
+    font-family: 'Roboto', sans-serif;
     font-size: 2rem;
 }
 
 
 p {
-    font-family: 'Secular One', sans-serif; 
     margin: 10px; 
 }
 
@@ -157,11 +156,11 @@ p {
 .removePhoneBtn {
     background-color: #FF6666;
     color: #ffffff;
+    padding: 12px;
     height: 2.5rem;
-    width: 60%;
     border: none;
     border-radius: 10px;
-    font-size: 1rem;  
+    font-size: 1.1rem;  
 }
 
 
@@ -173,6 +172,7 @@ p {
 
 .total-cost-div {
     margin-top: 25px;
+    font-weight: 700;
     height: 50px;
     font-size: 1.5rem;
     display: flex;
@@ -190,17 +190,17 @@ p {
 }
 
 .checkoutBtn {
-    height: 50px;
-    width: 220px;
-    border-radius: 5px;
+    
+    border-radius: 10px;
+    padding: 12px 25px 12px 25px;
     background-color: #66B2FF;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #fff;
     border: none;
 }
 
 .checkoutBtn i {
-    margin: 5px;
+    margin-right: 20px;
 }
 
 
@@ -209,6 +209,7 @@ p {
 .fa-solid {
     color: #fff;
     background-color: transparent;
+    
 }
 
 
@@ -216,8 +217,175 @@ p {
 
 /* Styling för enheter med bredd på minst 768px här - padda*/
 
-@media screen and (min-width: 768px) { }
+@media screen and (min-width: 768px) { 
+    .phone-div {
+        min-width: 150px;
+    }
+    
+    .phone-div img {
+        height: 150px;
+    }
+    
+    .phone-div h2 {
+        font-size: 2rem;
+    }
+    
+    
+    p {
+        margin: 10px; 
+    }
+}
 
 /* Styling för enheter med bredd på minst 320-480px här - mobil*/
 
-@media screen and (min-width: 480) { }
+@media screen and (min-width: 480) { 
+/* header area */
+header h1 {
+        font-size: 1.5rem;
+}
+
+header {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.hdiv-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hdiv-right p {
+    font-weight:lighter;
+    
+}
+
+.shopping-cart-number {
+font-size: 1.5rem;
+}
+
+/* title-div area plus title */
+.title-div {
+    height: 100px;
+    width: 100%;
+    color: #202020;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*position: absolute;*/
+    top: 70px;
+    font-size: 1.4rem;
+}
+
+.title-div i {
+    color: #202020;
+    margin: 5px;
+}
+
+/* mobile modells area */
+
+.phone-div-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    /*position: absolute;*/
+    top: 170px;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+
+.phone-div {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+    padding: 10px;
+    border: 2px solid #66B2FF;
+    border-radius: 10px;
+    min-width: 200px;
+}
+
+.phone-div img {
+    height: 150px;
+}
+
+.phone-div h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+}
+
+
+p {
+    margin: 10px; 
+}
+
+.addToCartBtn {
+    background-color: #66B2FF;
+    color: #ffffff;
+    height: 2.5rem;
+    width: 18rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+
+.addCheckoutBtn {
+    background-color: #66B2FF;
+    color: #ffffff;
+    height: 2.5rem;
+    width: 18rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+.removePhoneBtn {
+    background-color: #FF6666;
+    color: #ffffff;
+    padding: 12px;
+    height: 2.5rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;  
+}
+
+
+.removePhoneBtn i {
+    margin-right: 15px;
+}
+
+/* Completion of purchase div and p */
+
+.total-cost-div {
+    margin-top: 25px;
+    font-weight: 700;
+    height: 50px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Checkout-area */
+
+.checkoutBtn {
+    border-radius: 10px;
+    padding: 12px 25px 12px 25px;
+    background-color: #66B2FF;
+    font-size: 1.3rem;
+    color: #fff;
+    border: none;
+}
+
+.checkoutBtn i {
+    margin-right: 20px;
+}
+
+}

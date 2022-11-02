@@ -71,6 +71,7 @@ color: #FFFFFF;
     align-items: center;
     flex-direction: column;
     height: 100vh;
+    min-width: 200px;
 }
 
 .phone-div img {
@@ -78,24 +79,30 @@ color: #FFFFFF;
 }
 
 .phone-div h2 {
+    font-family: 'Roboto', sans-serif;
     font-size: 2.5rem;
 }
 
 p {
-    font-family: 'Secular One', sans-serif; 
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
     margin: 10px; 
 }
 
 .addToCartBtn {
     background-color: #66B2FF;
     color: #ffffff;
-    height: 2.5rem;
-    width: 18rem;
+    padding: 12px 25px 12px 25px;
     border: none;
     border-radius: 10px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     cursor: pointer;
 }
+
+.addToCartBtn i {
+    margin-right: 20px;
+}
+
 
 /* Suggestion for styling button disabled */
 button:disabled{
@@ -129,8 +136,12 @@ button:disabled{
 
 /* Styling för enheter med bredd på minst 768px här - padda*/
 
+
 @media screen and (min-width: 768px) { }
 
 /* Styling för enheter med bredd på minst 320-480px här - mobil*/
+
+/* i smalaste läget är counter för nära titeln Techstore*/
+/* Telefonerna ska grupperas 2 och 2 när fönstret minskas ner */
 
 @media screen and (min-width: 480) { }
