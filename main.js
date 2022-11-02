@@ -116,11 +116,11 @@ function addToCart(product) {
 //Function for creating counter in the header 
 function addToCartCounter () {
     const cartNumber = document.querySelector(".shopping-cart-number");
-
-    if (!localStorage.getItem("phonesInCart")) {
+    var something = JSON.parse(localStorage.getItem("phonesInCart"));
+    if (!localStorage.getItem("phonesInCart")||something.length <=0) {
         cartNumber.innerText = "";
     } else {
-        var something = JSON.parse(localStorage.getItem("phonesInCart"));
+        
         var length = something.length;
 
         cartNumber.innerText = length;
