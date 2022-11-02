@@ -13,6 +13,5 @@ main.appendChild(returnToStartDiv);
 
 returnToStartA.addEventListener("click", () => {
         location.href = "index.html";
-        localStorage.clear();
     });
    
