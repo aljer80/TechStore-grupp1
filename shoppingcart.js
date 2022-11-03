@@ -1,28 +1,31 @@
 var main = document.querySelector("main");
 
+//Creating "titleDiv"
 var titleDiv = document.createElement("div");
 titleDiv.classList.add("title-div");
 const titleDivH2 = document.createElement("h2");
 titleDivH2.innerHTML = '<i class="fa-solid fa-cart-shopping"></i>' + " Kundvagn";
-
+//Creating "phoneDivContainer"
 var phoneDivContainer = document.createElement("div");
 phoneDivContainer.classList.add("phone-div-container");
+//Creating "tiotalCostDiv"
 var totalCostDiv = document.createElement("div");
 totalCostDiv.classList.add("total-cost-div");
 
+//Calling function/s/
 checkoutBtnDisplay();
 totalCostP();
 
+//Appending created elements
 titleDiv.appendChild(titleDivH2);
 main.appendChild(titleDiv);
 main.appendChild(phoneDivContainer);
 main.appendChild(totalCostDiv);
 
-
-
+//Calling function/s/
 addProductsToShoppingCartPage();
 
-//Uses the array phonesInCart to create a visible product list on the website 
+//Uses the array "phonesInCart" to create a visible product list on the website 
 function addProductsToShoppingCartPage() {
     let phonesInCart = JSON.parse(localStorage.getItem("phonesInCart"));
     phoneDivContainer.innerHTML=""
@@ -50,9 +53,9 @@ function addProductsToShoppingCartPage() {
 }
 
 
-//Functions for creating the phoneDiv and all the elements in the phoneDiv on line ... to line ...
+//Functions for creating the phoneDiv and all the elements in the phoneDiv on line 58 to line 92
 
-//Function for creating the container phoneDiv
+//Function for creating the container "phoneDiv"
 function phoneDivHeading (title, phoneDiv) {
     const heading = document.createElement("h2");
     heading.innerText = title;
@@ -78,7 +81,6 @@ function phoneDivPriceP (price, phoneDiv) {
 
     return phoneDivPriceP;
 }
-
 
 //Function for creating totalPriceP's div
 function totalCostDiv (totalCostP) {
@@ -106,7 +108,6 @@ function totalCostP () {
             emptyMessage.remove();
         }
 
-
         const emptyCartP = document.createElement("p"); 
         emptyCartP.classList.add("empty-message")
          phoneDivContainer.appendChild(emptyCartP);
@@ -114,8 +115,6 @@ function totalCostP () {
          emptyCartP.innerHTML = "Din kundkorg är tom";
          return;
     }
-    
-    
     
      for (const product of phonesInCart) {
          var sum = 0;
@@ -129,6 +128,7 @@ function totalCostP () {
      totalCostP.innerText = "Total pris: " + sum + " kr";
      totalCostDiv.appendChild(totalCostP);
 }
+
 
 //Function for creating the button "remove from shopping cart" and for removing items from the shoppingcart
 function removePhoneBtn (product, phoneDiv) {
@@ -145,41 +145,14 @@ function removePhoneBtn (product, phoneDiv) {
 function removePhoneFromCart(product) {
     const phonesInCart = JSON.parse(localStorage.getItem("phonesInCart")); 
     const index = phonesInCart.indexOf(product);
-    phonesInCart.splice(index, 1); // https://www.w3schools.com/jsref/jsref_splice.asp
+    phonesInCart.splice(index, 1); 
     localStorage.setItem("phonesInCart", JSON.stringify(phonesInCart));
     addProductsToShoppingCartPage(); //single source of truth
     checkoutBtnDisplay ();
     totalCostP ();
 }
 
-//  function checkoutBtnDiv() {
-//     const checkoutBtnDiv = document.createElement("div");
-//     checkoutBtnDiv.classList.add("checkoutBtn-div");
-//     checkoutBtn(checkoutBtnDiv);
-
-//     return checkoutBtnDiv;
-// }
-
-//  function checkoutBtn (checkoutBtnDiv){
-//     const phonesInCart = JSON.parse(localStorage.getItem("phonesInCart"));
-
-    // if (phonesInCart && phonesInCart.length > 0) {
-    //     const checkoutBtn = document.createElement("button");
-    //     checkoutBtn.innerHTML = '<i class= "fa-sharp fa-solid fa-check"></i>' + "Slutför ditt köp";
-    //     checkoutBtn.classList.add("checkoutBtn");
-    //     checkoutBtnDiv.appendChild(checkoutBtn); 
-
-    //     checkoutBtn.addEventListener("click", () => {
-    //         location.href = "purchasecomplete.html";
-    //         localStorage.clear();
-    // });
-    // }; 
-    
- 
-//  }
-
-
-
+//Function that displays or hides the check out button
 function checkoutBtnDisplay () {
     const checkoutBtn = document.querySelector(".checkoutBtn-div");
     const phonesInCart = JSON.parse(localStorage.getItem("phonesInCart"));
@@ -189,14 +162,14 @@ function checkoutBtnDisplay () {
         checkoutBtn.style.display = "none";
     }
 
-
- checkoutBtn.addEventListener("click", () => {
+    checkoutBtn.addEventListener("click", () => {
     location.href = "purchasecomplete.html";
     localStorage.clear();
 });
 };
- 
- function addToCartCounter () {
+
+//Function that adds a counter next to the shopping cart
+function addToCartCounter () {
     const cartNumber = document.querySelector(".shopping-cart-number");
 
     if (!localStorage.getItem("phonesInCart")) {
@@ -208,5 +181,3 @@ function checkoutBtnDisplay () {
         cartNumber.innerText = length;
     }
 }
-
-
