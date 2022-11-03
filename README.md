@@ -3,6 +3,8 @@
 Måndagsmöten (lite längre)<br>
 Fredagsmöten (summera veckan)<br>
 
+Länk till repot: https://github.com/aljer80/TechStore-grupp1.git
+
 en kort beskrivning av ert projekt.
 Utvärderingsdokument skall belysa följande punkter:
 Vilka beslut som togs kring kodstrukturen, inkludera några exempel.
