@@ -3,9 +3,7 @@
 Måndagsmöten (lite längre)<br>
 Fredagsmöten (summera veckan)<br>
 
-Vi satsar på G <br>
-G-krav:
-
+en kort beskrivning av ert projekt.
 Utvärderingsdokument skall belysa följande punkter:
 Vilka beslut som togs kring kodstrukturen, inkludera några exempel.
 Vilka tekniker (ex. Bootstrap, SASS, JQuery mm) som har har används och varför.
@@ -14,8 +12,14 @@ Svårigheter.
 Vad hade kunnat göras annorlunda.
 Vidareutveckling.
 Omfattning 1 A4 sida datorskriven 
- 
 
+Om ni av något anledning har valt att inte följa kravspecen skall detta förklaras i README.md filen.
+Stylingen
+en sida isf pop up efter genomfört köp för vi tyckte det var snyggare. 
+
+Vi satsar på G <br>
+
+G-krav:
 Navigationsbar:<br>
 Hemsidan skall innehålla en fixerad navigationsbar längst upp på sidan som går hela vägen från vänster till höger.<br>
 Till vänster i navigationsbaren skall det finnas en titel (TechStore) som skall vara klickbar, ett klick på titeln tar användaren till startsidan.<br>
