@@ -16,9 +16,6 @@ var main = document.querySelector("main");
      });
  }
 
-
-
-
 function initSite() {
     loadProducts();
     addToCartCounter();
@@ -38,16 +35,6 @@ function addProductsToWebpage() {
         phoneDivBtn(product, phoneDiv);
         main.appendChild(phoneDiv);
     }
-    
-
-    // Check your console to see that the products are stored in the listOfProducts varible.
-    //console.log(listOfProducts);
-
-    // Add your code here, remember to brake your code in to smaller function blocks
-    // to reduce complexity and increase readability. Each function should have
-    // an explainetory comment like the one for this function, see row 22.
-    
-    // TODO: Remove the console.log and these comments when you've read them.
 }
 
 
@@ -125,7 +112,4 @@ function addToCartCounter () {
 
         cartNumber.innerText = length;
     }
-}
-
-
-
+} 
