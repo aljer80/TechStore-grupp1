@@ -37,7 +37,6 @@ function addProductsToWebpage() {
     }
 }
 
-
 //Function for creating the heading element in the phoneDiv  
 function phoneDivHeading (title, phoneDiv) {
     const heading = document.createElement("h2");
@@ -55,7 +54,6 @@ function phoneDivBtn (product, phoneDiv) {
     phoneDiv.appendChild(addToCartBtn);
     addToCartBtn.addEventListener ("click", function() {
         addToCart(product); 
-        addToCartBtn.disabled = true
      });
    
      return phoneDivBtn;
