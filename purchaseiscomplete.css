@@ -1,4 +1,4 @@
-/*FF6666 Ta bort knapp  66B2FF Lägg till/Slutför ditt köp, 202020 Alla svarta element, FFFFFF Alla vita element  */
+/*FF6666 Ta bort knapp,  66B2FF Lägg till/Slutför ditt köp, 202020 Alla svarta element, FFFFFF Alla vita element  */
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
 
 * {
@@ -8,8 +8,8 @@
     font-family: 'Secular One', sans-serif;
 }
 
-/* header area */
 
+/* header area */
 header h1 {
     font-family: 'Secular One', sans-serif;
     font-weight: 200;
@@ -20,8 +20,6 @@ header h1 {
 header a { 
     text-decoration: none;
 }
-
-
 
 header {
     height: 70px;
@@ -35,7 +33,6 @@ header {
     padding-left: 25px;
     padding-right: 25px;
 }
-
 
 #shoppingcart {
 font-size: 2rem;
@@ -71,9 +68,6 @@ main {
 
 }
 
-
-
-
 .returnToStartBtn {
     height: 50px;
     width: 220px;
@@ -84,8 +78,8 @@ main {
     border: none;
 }
 
-/* Styling för enheter med bredd på minst 768px här - padda*/
 
+/* Styling för enheter med bredd på minst 768px här - padda*/
 @media screen and (max-width: 768px) { 
     header i {
         font-size: 1.5rem;
@@ -117,9 +111,10 @@ main {
     }
 }
 
-/* Styling för enheter med bredd på minst 320-480px här - mobil*/
 
+/* Styling för enheter med bredd på minst 320-480px här - mobil*/
 @media screen and (max-width: 320px)  {
+
 /* header area */
 .hdiv-left h1 {
         font-size: 1rem;
