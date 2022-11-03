@@ -1,7 +1,6 @@
 var main = document.querySelector("main");
 
 //CREATING THE PAGE "RETURN TO INDEX PAGE"
-
 //creating a Div container
 const returnToStartDiv = document.createElement("div");
 returnToStartDiv.classList.add("returnToStartDiv");

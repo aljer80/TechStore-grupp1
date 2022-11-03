@@ -39,7 +39,7 @@ function addProductsToShoppingCartPage() {
             const cartNumber = document.querySelector(".shopping-cart-number"); 
             cartNumber.innerText = "";
         } else {
-            for (const product of phonesInCart) {   //(const product of listOfProducts )
+            for (const product of phonesInCart) {  
                 const phoneDiv = document.createElement("div"); //function for creating the div-element in main
                 //Function to render the products on the page 
                 phoneDiv.classList.add("phone-div");
@@ -53,7 +53,7 @@ function addProductsToShoppingCartPage() {
 }
 
 
-//Functions for creating the phoneDiv and all the elements in the phoneDiv on line 58 to line 92
+//Functions for creating the phoneDiv and all the elements in the phoneDiv on lines 58-92
 
 //Function for creating the container "phoneDiv"
 function phoneDivHeading (title, phoneDiv) {
@@ -129,7 +129,6 @@ function totalCostP () {
      totalCostDiv.appendChild(totalCostP);
 }
 
-
 //Function for creating the button "remove from shopping cart" and for removing items from the shoppingcart
 function removePhoneBtn (product, phoneDiv) {
     const removePhoneBtn =document.createElement("button");
@@ -152,7 +151,7 @@ function removePhoneFromCart(product) {
     totalCostP ();
 }
 
-//Function that displays or hides the check out button
+//Function that displays/hides the check out button
 function checkoutBtnDisplay () {
     const checkoutBtn = document.querySelector(".checkoutBtn-div");
     const phonesInCart = JSON.parse(localStorage.getItem("phonesInCart"));
@@ -166,7 +165,7 @@ function checkoutBtnDisplay () {
     location.href = "purchasecomplete.html";
     localStorage.clear();
 });
-};
+}
 
 //Function that adds a counter next to the shopping cart
 function addToCartCounter () {
