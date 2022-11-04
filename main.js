@@ -26,7 +26,7 @@ function addProductsToWebpage() {
 
     // Loop that renders the content on the page 
     for (const product of listOfProducts) {
-        const phoneDiv = document.createElement("div"); //creating a div element and giving it a class name
+        const phoneDiv = document.createElement("div"); 
         phoneDiv.classList.add("phone-div");
         phoneDivHeading(product.title, phoneDiv);
         phoneDivTextP(product.description, phoneDiv);
