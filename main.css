@@ -1,5 +1,6 @@
-/*FF6666 Ta bort knapp,  66B2FF Lägg till/Slutför ditt köp, 202020 Alla svarta element, FFFFFF Alla vita element  */
+/*FF6666 Ta bort knapp  66B2FF Lägg till/Slutför ditt köp, 202020 Alla svarta element, FFFFFF Alla vita element  */
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
 
 * {
     padding: 0;
@@ -8,6 +9,7 @@
 }
 
 /* header area */
+
 header h1 {
     font-family: 'Secular One', sans-serif;
     font-weight: 200;
@@ -21,6 +23,8 @@ header a {
 
 .phone-div h2 {
     font-family: 'Secular One', sans-serif;
+/*Find a better font*/
+
 }
 
 header {
@@ -46,10 +50,14 @@ header {
     color: #FFFFFF;
     padding-left: 5px;
     padding-right: 5px;
-    font-family: 'Secular One', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight:lighter;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
+
+.shopping-cart-number {
+    font-size: 2.5rem;
+    }
 
 #shoppingcart {
 font-size: 2rem;
@@ -61,6 +69,7 @@ color: #FFFFFF;
 }
 
 /* mobile modells area */
+
 .phone-div {
     display: flex;
     justify-content: center;
@@ -99,6 +108,8 @@ p {
     margin-right: 20px;
 }
 
+
+
 .addCheckoutBtn {
     background-color: #66B2FF;
     color: #ffffff;
@@ -133,69 +144,43 @@ p {
     }
     
     .phone-div img {
-        height: 300px;
+        height: 150px;
     }
     
     .phone-div h2 {
         font-size: 2rem;
     }
-    
+        
     p {
         margin: 10px; 
     }
-
 }
 
 /* Styling för enheter med bredd på minst 320-480px här - mobil*/
 @media screen and (max-width: 320px)  {
 /* header area */
-.hdiv-left h1 {
-        font-size: 1rem;
-}
+    .hdiv-left h1 {
+            font-size: 1rem;
+    }
 
-header {
-    padding-left: 10px;
-    padding-right: 10px;
-}
+    header {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 
-.hdiv-right {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
+    .hdiv-right {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
 
-.hdiv-right p {
-    font-weight:lighter;
-}
+    .hdiv-right p {
+        font-weight:lighter;
+        
+    }
 
-.shopping-cart-number {
+    .shopping-cart-number {
     font-size: 1.5rem;
-}
-
-/* title-div area plus title */
-.title-div {
-    height: 100px;
-    width: 100%;
-    color: #202020;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /*position: absolute;*/
-    top: 70px;
-    font-size: 1.4rem;
-}
-
-.title-div i {
-    color: #202020;
-    margin: 5px;
-}
-
-.phone-div p {
-    font-size: 1rem;
-}
-
-.addToCartBtn {
-    font-size: 1rem;
-}
+    }
 
 }
