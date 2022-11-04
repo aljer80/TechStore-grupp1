@@ -42,8 +42,6 @@ function phoneDivHeading (title, phoneDiv) {
     const heading = document.createElement("h2");
     heading.innerText = title;
     phoneDiv.appendChild(heading);
-
-    return phoneDivHeading;
 }
 
 //Function for creating the button (add to cart) in the phoneDiv  
@@ -55,8 +53,6 @@ function phoneDivBtn (product, phoneDiv) {
     addToCartBtn.addEventListener ("click", function() {
         addToCart(product); 
      });
-   
-     return phoneDivBtn;
 }
 
 //Function for creating the phone description in the phoneDiv  
@@ -64,8 +60,6 @@ function phoneDivTextP (description, phoneDiv) {
     const textP = document.createElement("p");
     textP.innerText = description;
     phoneDiv.appendChild(textP);
-
-    return phoneDivTextP;
 }
 
 //Function for creating the phone image in the phoneDiv  
@@ -73,8 +67,6 @@ function phoneDivImage (image, phoneDiv) {
     const phoneImage = document.createElement("img")
     phoneImage.setAttribute("src", "/assets/" + image);
     phoneDiv.appendChild(phoneImage);
-
-    return phoneDivImage;
 }
 
 //Function for creating the price in the phoneDiv  
@@ -82,8 +74,6 @@ function phoneDivPriceP (price, phoneDiv) {
     const priceP = document.createElement("p");
     priceP.innerText = price + " kr";
     phoneDiv.appendChild(priceP);
-
-    return phoneDivPriceP;
 }
 
 //Function for adding products to cart  
